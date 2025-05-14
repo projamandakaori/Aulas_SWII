@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    
+    <style>
+        *{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav{
+            background-color:blanchedalmond;
+            color: black;
+            width: 100%;
+            height: 55px; /*mesmo tamanho da margin-top do main*/
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        nav ul{
+            list-style: none; /*Tira o aspecto de lista*/
+            display: flex;
+        }
+
+        nav li{
+            padding: 15px;
+            text-align: relative;
+            
+        }
+
+        nav li:hover{
+            background-color: rgb(247, 210, 152);
+        }
+
+        nav a{
+            color: rgb(44, 41, 24);
+            text-decoration: none;
+        }
+
+        main{
+            padding: 20px;
+            margin-top: 55px;
+        }
+
+        /**Dropdown**/
+
+        nav ul li ul{
+            background-color: rgb(253, 245, 233);
+            width: 250px;
+            left: 0;
+            position: absolute;
+            top: 100%;
+            display: none;
+            flex-direction: column;
+        }
+
+        nav ul li{
+            position: relative;
+        }
+
+        nav ul li:hover ul {
+            display: flex;
+            flex-direction: column;
+        }
+
+    </style>
+</head>
+<body>
+<nav>  
+    <ul>
+        <li><a href="#sul">Sul</a>
+            <ul>
+                <li><a href="">Paraná</a></li>
+                <li><a href="">Rio Grande do Sul</a></li>
+                <li><a href="">Santa Catarina</a></li>
+            </ul>
+        </li>
+    </ul>
+
+    <ul>
+        <li><a href="#sudeste">Sudeste</a>
+            <ul>
+                <li><a href="">Espírito Santo</a></li>
+                <li><a href="">Minas Gerais</a></li>
+                <li> <a href="">Rio de Janeiro</a></li>
+                <li><a href="">São Paulo</a></ul></li>
+            </ul>
+        </li>
+    </ul>
+
+    <ul>
+        <li><a href="#centro_oeste">Centro-oeste</a>
+            <ul>
+                <li><a href="">Distrito Federal</a></li>
+                <li><a href="">Goiás</a></li>
+                <li><a href="">Mato Grosso</a></li>
+                <li><a href="">Mato Grosso do Sul</a></li>
+            </ul>
+        </li>
+    </ul>
+
+    <ul>
+        <li><a href="#nordeste">Nordeste</a>
+            <ul>
+                <li><a href="">Alagoas</a></li>
+                <li><a href="">Bahia</a></li>
+                <li><a href="">Ceará</a></li>
+                <li><a href="">Maranhão</a></li>
+                <li><a href="">Paraíba</a></li>
+                <li><a href="">Pernambuco</a></li>
+                <li><a href="">Piauí</a></li>
+                <li><a href="">Rio Grande do Norte</a></li>
+                <li><a href="">Sergipe</a></li>
+            </ul>
+        </li>
+    </ul>
+
+    <ul>
+        <li><a href="#norte">Norte</a>
+            <ul>
+                <li><a href="">Acre</a></li>
+                <li><a href="">Amapá</a></li>
+                <li><a href="">Amazonas</a></li>
+                <li><a href="">Pará</a></li>
+                <li><a href="">Rondônia</a></li> 
+                <li><a href="">Roraima</a></li>
+                <li><a href="">Tocantins</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+
+<main>
+    <h1>Brasil</h1>
+    <p>Bem-vindo ao site!</p>
+</main>
+</body>
+</html>
+
