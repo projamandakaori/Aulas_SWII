@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    
+    <style>
+      *{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav{
+            background-color:lightsteelblue;
+            color: black;
+            width: 250px;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        nav ul{
+            list-style: none;
+        }
+        
+        nav li{
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav li:hover{
+            background-color:lightsteelblue;
+        }
+
+        nav a{
+            color: black;
+            text-decoration: none;
+        }
+
+        main{
+            padding: 20px;
+            margin-left: 250px; /*Mesmo valor width (nav)*/
+        }
+
+        /**Dropdown**/
+
+        nav ul li ul{
+            background-color:azure;
+            width: 250px;
+            left: 100%;
+            position: absolute;
+            top: 0;
+            display: none;
+            flex-direction: column;
+        }
+
+        nav ul li{
+            position: relative;
+        }
+
+        nav ul li:hover ul {
+            display: flex;
+            flex-direction: column;
+        }
+
+    </style>
+</head>
+<body>
+<nav>  
+    <ul>
+        <li><a href="#sul">Sul</a>
+            <ul>
+                <li><a href="">Paraná</a></li>
+                <li><a href="">Rio Grande do Sul</a></li>
+                <li><a href="">Santa Catarina</a></li>
+            </ul>
+        </li>
+    </ul>
+
+    <ul>
+        <li><a href="#sudeste">Sudeste</a>
+            <ul>
+                <li><a href="">Espírito Santo</a></li>
+                <li><a href="">Minas Gerais</a></li>
+                <li> <a href="">Rio de Janeiro</a></li>
+                <li><a href="">São Paulo</a></ul></li>
+            </ul>
+        </li>
+    </ul>
+
+    <ul>
+        <li><a href="#centro_oeste">Centro-oeste</a>
+            <ul>
+                <li><a href="">Distrito Federal</a></li>
+                <li><a href="">Goiás</a></li>
+                <li><a href="">Mato Grosso</a></li>
+                <li><a href="">Mato Grosso do Sul</a></li>
+            </ul>
+        </li>
+    </ul>
+
+    <ul>
+        <li><a href="#nordeste">Nordeste</a>
+            <ul>
+                <li><a href="">Alagoas</a></li>
+                <li><a href="">Bahia</a></li>
+                <li><a href="">Ceará</a></li>
+                <li><a href="">Maranhão</a></li>
+                <li><a href="">Paraíba</a></li>
+                <li><a href="">Pernambuco</a></li>
+                <li><a href="">Piauí</a></li>
+                <li><a href="">Rio Grande do Norte</a></li>
+                <li><a href="">Sergipe</a></li>
+            </ul>
+        </li>
+    </ul>
+
+    <ul>
+        <li><a href="#norte">Norte</a>
+            <ul>
+                <li><a href="">Acre</a></li>
+                <li><a href="">Amapá</a></li>
+                <li><a href="">Amazonas</a></li>
+                <li><a href="">Pará</a></li>
+                <li><a href="">Rondônia</a></li> 
+                <li><a href="">Roraima</a></li>
+                <li><a href="">Tocantins</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+
+<main>
+    <h1>Brasil</h1>
+    <p>Bem-vindo ao site!</p>
+</main>
+</body>
+</html>
+
