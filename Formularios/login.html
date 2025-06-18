@@ -10,7 +10,7 @@
     
 <div class="container">
 <h1>Login</h1>
-    <form action="">
+    <form id="loginForm">
             <p>E-mail</p>
             <input type="text" id="input_email" class="input" placeholder="Insira seu e-mail" required>
 
@@ -25,4 +25,27 @@
 </div>
 
 </body>
+
+<script>
+    document.getElementById("loginForm").addEventListener("submit", function(event){
+        const email = document.getElementById("input_email").value.trim();
+        const senha = document.getElementById("input_senha").value;
+
+        const emailRegex = /^[^\s@] + @[^\s@] +\.[^\s@]+$/;
+
+        if (!emailRegex.test(email)){
+            alert("Por favor, insira um e-mail válido.");
+            event.preventDefault();
+            return;
+        }
+
+        if (senha.lenght === 0){
+            alert("Por favor, insira sua senha.");
+            event.preventDefault();
+            return;
+        }
+    });
+
+</script>
+
 </html>

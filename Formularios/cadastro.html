@@ -9,7 +9,7 @@
 <body>
 <div class="form">
 <h1>Cadastro</h1>
-    <form action="">
+    <form id="cadastroForm">
             <p>Nome Completo</p>
             <input type="text" id="input_nome" class="input" placeholder="Insira seu nome completo" required>
 
@@ -26,7 +26,7 @@
             <input type="password" id="input_senha" class="input" placeholder="Insira sua senha" required>
 
             <p>Confirmar Senha</p>
-            <input type="password" id="input_senha" class="input" placeholder="Confirme sua senha" required>
+            <input type="password" id="input_confirmaSenha" class="input" placeholder="Confirme sua senha" required>
 
             <br><br>
             <button class="btn_entrar" onclick="window.location.href = 'login.html'">Entrar</button>
@@ -37,4 +37,46 @@
 </div>
 
 </body>
+
+<script>
+    document.getElementById("cadastroForm").addEventListener("submit", function(event){
+    
+    const email = document.getElementById("input_email").value.trim();
+    const telefone = document.getElementById("input_tel").value.trim();
+    const cpf = document.getElementById("input_cpf").value.trim();
+    const senha = document.getElementById("input_senha").value.trim();
+    const confirmaSenha = document.getElementById("input_confirmaSenha").value.trim();
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const telefoneRegex = /^\(?\d{2}\)?\s?\d{4,5}-?\d{4}$/;
+
+    const cpfRegex = /^\d{11}$/;
+
+    if(!emailRegex.test(email)){
+        alert("Por favor, insira um e-mail válido.");
+        event.preventDefault();
+        return;
+    }
+
+    if(!telefoneRegex.test(telefone)){
+        alert("Por favor, insira um telefone válido.");
+        event.preventDefault();
+        return;
+    }
+
+    if(!cpfRegex.test(cpf)){
+        alert("O CPF deve conter exatamente 11 números, sem ponts ou traços.");
+        event.preventDefault();
+        return;
+    }
+
+    if(senha !== confirmaSenha){
+        alert("As senhas não coincidem. Verifique novamente.");
+        event.preventDefault();
+        return;
+    }
+
+})
+</script>
+
 </html>
